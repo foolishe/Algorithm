@@ -7,6 +7,4 @@ def genfib():
         yield n 
         fib2=fib1
         fib1=next#fib(n+1)=next+fib(n-1)
-import os,ipython
-os.system(ipython.start_ipython())
-#
+
