@@ -13,8 +13,7 @@ def gensubset(L):
     key=L[-1:]
     for small in smaller:
         res.append(key+small)
-        
-    return smaller+res
+    return smaller+res #wonderful step.
 L=[1,2,3,4] 
 a=gensubset(L)
 print (a)  
