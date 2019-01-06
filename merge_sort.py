@@ -38,7 +38,7 @@ T(2**(n+1))==(i+1)+1
 '''
 
 L=[random.randrange(i)
-for i in range(20,50)]
+    for i in range(20,5000)]
 
 print(L)
 print(merge_sort(L))
