@@ -31,9 +31,18 @@ def quick_sort(A,q,p):
         i = sort_a(A,q,p)
         quick_sort(A,q,i-1)
         quick_sort(A,i+1,p)
+    return A
+
+def quick_sort1(A,q,p):
+    if  p > q:
+        i = sort_algorithm(A,q,p)
+        quick_sort(A,q,i-1)
+        quick_sort(A,i+1,p)
+    return A
 
 
 L = list(random.randrange(i) for i in range(50,70))
 #L = [4,5,3,2,1,6]
-quick_sort(L,0,len(L)-1)
-print(L)
+print(quick_sort(L,0,len(L)-1),
+    '\n','\n',
+    quick_sort1(L,0,len(L)-1))
