@@ -1,6 +1,7 @@
 #寻找最大和的连续字数组
 import random
 
+#  分治法:分解问题,解决子问题与原问题的差异. the subset in left or right or cross mid
 def FIND_Maximum_cross_mid_Subarray(A,low,mid,high):
     left_sum = -10**9
     sum = 0
@@ -25,8 +26,6 @@ def FIND_Maximum_cross_mid_Subarray(A,low,mid,high):
     return left_low,right_high,left_sum+right_sum
 
 
-
-
 def FIND_Maximum_Subarray(A,low,high):
     if high == low:
         return(low,high,A[low])
@@ -46,6 +45,8 @@ def FIND_Maximum_Subarray(A,low,high):
     else:
         return cross_low,cross_high,cross_sum
 
+
+# another way
 def Find_maximum_subarray_liner(L):
     max_subarray_sum = -10**9
 
@@ -63,10 +64,7 @@ def Find_maximum_subarray_liner(L):
 
 
 L = (2,5,-5,-3,6,8)
-L1=[]
-A = (random.randrange(i)*(-1)**i for i in range(10,20))
-for i in A:
-    L1.append(i)
+L1 = tuple(random.randrange(i)*(-1)**i for i in range(10,20))
 
 print(FIND_Maximum_Subarray(L,0,len(L)-1))
 print(Find_maximum_subarray_liner(L))
